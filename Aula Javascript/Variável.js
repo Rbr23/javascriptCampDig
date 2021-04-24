@@ -36,5 +36,5 @@ var idade = 29
 
 //var texto = "Meu nome é "
 
-console.log(idade nome)
+console.log("Meu nome é " + nome)
 
