@@ -21,7 +21,7 @@ caso condição for falsa então eu nao executo trecho de código {
 
 var condicao = true //variável com valor de verdadeira
 
-var condicao = false //variável com valor de falsa
+condicao = false //variável com valor de falsa
 
 var numeroValido = 2 > 1 //condição com valor de verdadeira
 numeroValido = 2 > 8 // condição com valor de falsa
@@ -43,3 +43,6 @@ caso (2 > 8 for falsa) então eu nao executo trecho de código {
 }
 
 */
+
+
+

@@ -81,7 +81,7 @@ var conjunto = {}
 
 
 
-//var texto1 = 'Vou ao mercado'
+var texto1 = 'Vou ao mercado'
 
 console.log("primeira ocorrência: " + texto1.indexOf('o')) //retorna o primeiro índice da letra enviada; a primeira ocorrência
 
@@ -90,7 +90,7 @@ console.log("ultima ocorrência: " + texto1.lastIndexOf('o'))//retorna o último
 console.log(texto1.indexOf('mer'))
 
 
-//var professor = 'Roberto'
+var professor = 'Roberto'
 
 console.log(professor.replace('o', 'Ana')) //método que substitui um parâmetro pelo segundo parâmetro dentro da string
 
@@ -103,7 +103,12 @@ var salario = 100
 
 var nome1 = `Meu amigo ${funcionario} recebe o salario de: ${salario} reais `
 
-console.log(nome1)                                  
+var parte1 = nome1.substring(5, 8)  
+var parte2 = nome1.substring(9, 12)
+
+var resultado = `${parte1} e ${parte2} `
+console.log(resultado)
+
 
 
 
