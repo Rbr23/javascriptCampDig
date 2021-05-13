@@ -18,3 +18,5 @@ var nomeFuncionario // Variável criada, porém, não inicializada; por isso, o 
 
 
 
+
+

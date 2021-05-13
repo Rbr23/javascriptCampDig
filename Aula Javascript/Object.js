@@ -28,8 +28,8 @@ var conjunto = {
     pais: 'Maria'
 }
 
-//console.log(conjunto.nome)
-//console.log(conjunto.endereco)
+console.log(conjunto.nome)
+console.log(conjunto.endereco)
 //console.log(conjunto.salario)
 //console.log(conjunto.profissao)
 //console.log(conjunto.filhos)
@@ -58,6 +58,7 @@ var colecao = {}
 colecao.carro = 'Fox'
 colecao.bike = 'Caloi'
 colecao.moto = 'Honda'
+colecao.casa = 'Numero 2'
 
 colecao.professores = {
     professor1: 'Roberto',
@@ -69,6 +70,9 @@ colecao.professores = {
 //console.log(colecao)
 
 var chaves = Object.keys(conjunto) // método responsável por retornar apenas as chaves da variavel object
+
+
+//console.log(Object.keys(conjunto))
 
 var valores = Object.values(colecao) // método responsável por retornar apenas os valores da variavel object
 
@@ -95,5 +99,7 @@ var professores = {
 
 var turma = Object.assign(alunos, professores) // concatena variáveis do tipo object
 
-console.log(Object.values(turma))
+console.log(turma)
+
+
 
