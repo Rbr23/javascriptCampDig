@@ -1,59 +1,25 @@
 
 
-//Exercicio
+var array = [2, 7, 5, 9, 8]
 
-//1
-
-//A)
-var nomeAluno 
-
-//B)
-var nomeFuncionario = null
-
-//C)
-//nomeProfessor
-
-
-//2
-
-var campinhoDigital = {
-    professor: 'Roberto',
-    computador: 'notebook',
-    materia: 'programação',
-    diaAula: true,
-    aluno:{
-        aluno1: 'Alan',
-        aluno2: 'Carol',
-        faltantes: {
-
-        }
+array.forEach(function(elemento, indice){
+    if(Number(elemento) % 2 == 0){
+        console.log(`O elemento ${elemento} é PAR e está no índice ${indice}`)
+    } else{
+        console.log(`O elemento ${elemento} é IMPAR e está no índice ${indice}`)
     }
-
-}
-
-console.log(campinhoDigital.diaAula)
+})
 
 
-//3
-
-var carros = {}
-
-carros.sedan = 'Opala'
-carros.hatch = 'Fusca'
-carros.comprados = false
-
-console.log(carros.comprados)
-
-//4
-
-console.log(Object.keys(campinhoDigital))
-
-console.log(Object.values(carros))
-
-//5
-
-var todos = Object.assign(campinhoDigital, carros)
-
-console.log(todos)
+a = 2
+b = 2
 
 
+console.log(Number('3') === 3)
+
+
+var elementos = [{ amigo: 2, amiga: [2, 4]}, 5]
+
+var valeu = elementos[0].amiga[0]
+
+console.log(valeu / elementos[1])

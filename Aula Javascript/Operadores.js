@@ -1,5 +1,5 @@
 
-//OPERADORES ARITMÉTICOS
+//---------------------------------------------------OPERADORES ARITMÉTICOS----------------------------------------------------------
 
 var a = 10
 var b = 20
@@ -26,7 +26,7 @@ resultado = 7 % 2
 //console.log(resultado)
 
 
-//OPERADORES RELACIONAIS
+//------------------------------------------OPERADORES RELACIONAIS---------------------------------------------------------------------
 
 a = 3
 b = 4
@@ -49,4 +49,70 @@ console.log('SINAL DE IDÊNTICO: ', a === b) //NÃO IDÊNTICO RETORNA FALSO
 //SINAL DE NÃO IDÊNTICO ENTRE VALORES E TIPOS É FEITO ATRAVÉS DO OPERADOR:   !==
 console.log('SINAL DE NÃO IDÊNTICO: ', a !== c) //IDÊNTICO RETORNA FALSO
 console.log('SINAL DE NÃO IDÊNTICO: ', a !== b) //NÃO IDÊNTICO RETORNA VERDADEIRO
+
+//SINAL DE 'MAIOR QUE'
+console.log('Maior que: ', 9 > 4)
+
+//SINAL DE 'MENOR QUE'
+console.log('Menor que: ', 2 < 4 )
+
+//SINAL DE 'MAIOR OU IGUAL QUE'
+console.log('Maior ou igual que: ', 8 >= 8)
+
+//SINAL DE 'MENOR OU IGUAL QUE'
+console.log('Menor ou igual que: ', 10 <= 8)
+
+
+//-----------------------------------------------OPERADORES LÓGICOS OU OPERADORES BINÁRIOS------------------------------------------------
+
+/*
+
+TABELA VERDADE
+
+operador (e) == &&
+
+V and V = V
+V and F = F
+F and V = F
+F and F = F
+--------------------------------------
+
+operador (ou) == ||
+V or V = V
+V or F = V
+F or V = V
+F or F = F
+
+*/
+
+
+
+var variavelVerdadeira = true
+var variavelFalso = false
+
+//-------------------------------------------AND------------------------------------------------
+console.log('-------------------------------AND-----------------------------------------------------')
+
+console.log( 'OPERADOR LÓGICO: V and V = V', variavelVerdadeira && variavelVerdadeira)
+console.log( 'OPERADOR LÓGICO: V and F = F', variavelVerdadeira && variavelFalso)
+console.log( 'OPERADOR LÓGICO: F and V = F', variavelFalso && variavelVerdadeira)
+console.log( 'OPERADOR LÓGICO: F and F = F', variavelFalso && variavelFalso)
+
+//-------------------------------OR-----------------------------------------------------
+console.log('-------------------------------OR-----------------------------------------------------')
+
+console.log( 'OPERADOR LÓGICO: V or V = V', variavelVerdadeira || variavelVerdadeira)
+console.log( 'OPERADOR LÓGICO: V or F = V', variavelVerdadeira || variavelFalso)
+console.log( 'OPERADOR LÓGICO: F or V = V', variavelFalso || variavelVerdadeira)
+console.log( 'OPERADOR LÓGICO: F or F = F', variavelFalso || variavelFalso)
+
+
+
+var condicaoA = 8 > 5
+
+
+
+var condicaoB = 3 < 1
+
+console.log(condicaoA && condicaoB)
 

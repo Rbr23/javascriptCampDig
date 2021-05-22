@@ -1,5 +1,5 @@
 
-//Array é uma forma de agrupar vários valores, através de um único identificador de uma forma linear.
+//Array é uma forma de agrupar vários valores (ELEMENTOS), através de um único identificador de uma forma linear.
 //Array é uma estrutura indexada; conseguimos acessar seus elementos através de um índice. 
 //Em javascript, o array é heterogêneo. 
 //Array, em javascript, é um objeto.
@@ -34,6 +34,7 @@ console.log(valores[0],';', valores[2],';', valores[1])
 
 var professores = ['Roberto', 'Susie', 'Paulo'] //atribuição literal
 
+
 var demitidos = new Array('Bia', 'Carlos', 'Luiz') //instanciando um array
 
 
@@ -42,9 +43,10 @@ console.log(professores[2])
 
 
 
-professores[3] = 'Luciana'
+professores[0] = 'Luciana' //atribuição
 professores[4] = 87
 
+console.log(professores)
 
 demitidos[3] = true
 

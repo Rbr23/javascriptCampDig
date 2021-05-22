@@ -111,7 +111,7 @@ console.log(resultado)
 
 
 
-
+console.log(2 === 2)
 
 
 
