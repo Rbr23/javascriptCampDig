@@ -97,6 +97,8 @@ console.log(alunos)
 
 //3) terceira forma de utilizar o splice : o primeiro parâmetro vai indicar a partir de qual índice eu quero fazer a remoção, o segundo parâmetro vai indicar a quantidade de elementos. Os próximos parâmetros vão indicar os elementos que preciso adicionar no lugar dos que foram removidos. 
 
+alunos = ['Arthur', 'Ligia', 'Marta', 'Carol']
+
 alunos.splice(1, 3, 'Adidas', 'Nike')
 console.log(alunos)
 

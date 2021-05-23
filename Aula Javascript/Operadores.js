@@ -108,11 +108,19 @@ console.log( 'OPERADOR LÓGICO: F or F = F', variavelFalso || variavelFalso)
 
 
 
-var condicaoA = 8 > 5
+var condicaoA = 8 > 5 //armazenando o valor de verdadeiro
 
 
 
-var condicaoB = 3 < 1
+var condicaoB = 3 < 1 //armazenando o valor de falso
 
-console.log(condicaoA && condicaoB)
+console.log('condicaoA e condicaoB', !condicaoA && !condicaoB)
 
+
+//--------------------------------------------------QUINTA------------------------------------------------------
+
+//Negação é simplesmente a alteração do valor de verdadeiro para falso ou de falso para verdadeiro
+console.log('-----------------------------------------QUINTA-------------------------------------------')
+
+console.log('Transformando verdadeiro em falso: ', !true)
+console.log('Transformando falso em verdadeiro: ', !false)
