@@ -114,7 +114,7 @@ var condicaoA = 8 > 5 //armazenando o valor de verdadeiro
 
 var condicaoB = 3 < 1 //armazenando o valor de falso
 
-console.log('condicaoA e condicaoB', !condicaoA && !condicaoB)
+console.log('condicaoA e condicaoB', condicaoA && !condicaoB)
 
 
 //--------------------------------------------------QUINTA------------------------------------------------------
@@ -124,3 +124,6 @@ console.log('-----------------------------------------QUINTA--------------------
 
 console.log('Transformando verdadeiro em falso: ', !true)
 console.log('Transformando falso em verdadeiro: ', !false)
+
+
+

@@ -33,5 +33,11 @@ funcionario = 'CAROL'
 console.log(funcionario)
 
 
+var professor = 'Roberto'
+
+professor = 'Rodolfo' 
 
 
+const professora = 'Luciana'
+
+professora = 'Beth'

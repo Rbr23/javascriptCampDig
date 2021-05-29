@@ -1,25 +1,33 @@
 
 
-var array = [2, 7, 5, 9, 8]
 
-array.forEach(function(elemento, indice){
-    if(Number(elemento) % 2 == 0){
-        console.log(`O elemento ${elemento} é PAR e está no índice ${indice}`)
-    } else{
-        console.log(`O elemento ${elemento} é IMPAR e está no índice ${indice}`)
-    }
-})
+var variavelVerdadeira = true
+var variavelFalso = false
 
 
-a = 2
-b = 2
+console.log( 'OPERADOR LÓGICO: V and V = V', true && true)
+console.log( 'OPERADOR LÓGICO: V and F = F', variavelVerdadeira && variavelFalso)
+console.log( 'OPERADOR LÓGICO: F and V = F', variavelFalso && variavelVerdadeira)
+console.log( 'OPERADOR LÓGICO: F and F = F', variavelFalso && variavelFalso)
+
+//-------------------------------OR-----------------------------------------------------
+console.log('-------------------------------OR-----------------------------------------------------')
+
+console.log( 'OPERADOR LÓGICO: V or V = V', variavelVerdadeira || variavelVerdadeira)
+console.log( 'OPERADOR LÓGICO: V or F = V', variavelVerdadeira || variavelFalso)
+console.log( 'OPERADOR LÓGICO: F or V = V', variavelFalso || variavelVerdadeira)
+console.log( 'OPERADOR LÓGICO: F or F = F', variavelFalso || variavelFalso)
 
 
-console.log(Number('3') === 3)
+var conjuntos = [[],true,30,'Portugal', false, 500, [10, 40, 50, 60], {estado:'Rio de janeiro', array:[100, 200, 300]}]
+
+console.log(conjuntos[5] % conjuntos[7].array[1])
 
 
-var elementos = [{ amigo: 2, amiga: [2, 4]}, 5]
 
-var valeu = elementos[0].amiga[0]
+function mes(numero){
+    var mes = ['janeiro', 'fevereiro', 'Março', 'Abril', 'Maio', 'Junho']
+    console.log(mes[numero - 1])
+}
 
-console.log(valeu / elementos[1])
+mes(6)
