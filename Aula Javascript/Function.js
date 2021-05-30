@@ -84,3 +84,39 @@ console.log(imprimirSalario('Rogério', 1000))
 console.log(imprimirSalario('Arthur', 100000))
 
 
+console.log('-----------------------------------FUNÇÕES ANÔNIMAS------------------------------------------')
+
+//função anônima é uma função sem nome que pode receber uma variável por parâmetro ou pode receber outra função por parâmetro
+
+
+//função com retorno => armazena o valor retornado na variável
+ function soma(a, b){
+     console.log('função de soma: ', a + b)
+ }
+
+ //var result = soma(2, 4)
+
+
+
+ var imprimirSomaB = function(a, b, soma){
+         soma(a, b)
+ }
+
+imprimirSomaB(2, 10, soma)
+
+
+ //função anônima
+ //a variável que recebeu a função anônima, agora, passa a ter o mesmo emprego da função
+
+function multiplicacao(a, b){
+    return a * b
+}
+
+
+ var imprimirMultiplicacaoB = function(a, b, multiplicacao){
+        console.log('O resultado dessa multiplicação dentro da função anônima é: ', multiplicacao(a, b))
+ }
+
+ imprimirMultiplicacaoB(3, 10, multiplicacao)
+
+

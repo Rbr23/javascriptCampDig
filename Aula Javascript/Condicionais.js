@@ -51,4 +51,41 @@ if(numero == 5){
     console.log('Executando esse trecho de código porque o valor da condicional não deu verdadeira')
 }
 
+console.log('---------------------------------------AULA DE QUINTA----------------------------------------------')
 
+//if => verifica a condição que está entre parênteses
+//else if => verifica a condição que está entre parênteses, após passar por alguma condicional acima
+//else => se nenhuma das condições acima foram satisfeitas, então executa o trecho de código do else
+
+
+function numeroFuncao(x){
+    if(x < 10){ 
+        console.log('O x foi menor do que 10') // se o resultado for verdadeiro, ele executa
+    } else if (x == 11){
+        console.log('X é igual a 11')
+    } else if (x == 12){
+        console.log('X é igual a 12')
+    } else if(x == 13){
+        console.log('X é igual a 13')
+    } else{
+        console.log('O x não satifez nenhuma das condicionais acima')
+    }
+}
+
+//numeroFuncao(15)
+
+
+function notaAluno(notaA, notaB){
+    media = (notaA + notaB)/2
+    
+    if(media == 10){
+        console.log('Aprovado com distinção', media)
+    } else if(media >= 7 && media < 10){
+        console.log('Aprovado', media)
+    } else{
+        console.log('Reprovado!', media)
+    }
+
+}
+
+notaAluno(2, 10)

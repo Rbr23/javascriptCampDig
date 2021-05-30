@@ -31,3 +31,14 @@ function mes(numero){
 }
 
 mes(6)
+
+
+var soma = function(x, y){
+    return x + y
+}
+
+imprimirResultado = function(a, b, operacao){
+    console.log(operacao(a, b))
+}
+
+imprimirResultado(2, 3, soma)
