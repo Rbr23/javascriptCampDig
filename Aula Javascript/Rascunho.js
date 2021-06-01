@@ -1,44 +1,59 @@
 
 
 
-var variavelVerdadeira = true
-var variavelFalso = false
 
+//1
+function mesContador(contador){
+    var array = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 
-console.log( 'OPERADOR LÓGICO: V and V = V', true && true)
-console.log( 'OPERADOR LÓGICO: V and F = F', variavelVerdadeira && variavelFalso)
-console.log( 'OPERADOR LÓGICO: F and V = F', variavelFalso && variavelVerdadeira)
-console.log( 'OPERADOR LÓGICO: F and F = F', variavelFalso && variavelFalso)
+    resultado = contador - 1
 
-//-------------------------------OR-----------------------------------------------------
-console.log('-------------------------------OR-----------------------------------------------------')
+    console.log(array[resultado])
 
-console.log( 'OPERADOR LÓGICO: V or V = V', variavelVerdadeira || variavelVerdadeira)
-console.log( 'OPERADOR LÓGICO: V or F = V', variavelVerdadeira || variavelFalso)
-console.log( 'OPERADOR LÓGICO: F or V = V', variavelFalso || variavelVerdadeira)
-console.log( 'OPERADOR LÓGICO: F or F = F', variavelFalso || variavelFalso)
-
-
-var conjuntos = [[],true,30,'Portugal', false, 500, [10, 40, 50, 60], {estado:'Rio de janeiro', array:[100, 200, 300]}]
-
-console.log(conjuntos[5] % conjuntos[7].array[1])
-
-
-
-function mes(numero){
-    var mes = ['janeiro', 'fevereiro', 'Março', 'Abril', 'Maio', 'Junho']
-    console.log(mes[numero - 1])
 }
 
-mes(6)
+mesContador(9)
 
 
-var soma = function(x, y){
-    return x + y
+function mediaAluno(notaA, notaB){
+    var media = (notaA + notaB) / 2
+    if(media >= 7){
+        console.log('Aprovado')
+    } else{
+        console.log('Reprovado')
+    }
 }
 
-imprimirResultado = function(a, b, operacao){
-    console.log(operacao(a, b))
+mediaAluno(8, 3)
+
+
+function multiplicacao(a, b){
+    return a * b
+
 }
 
-imprimirResultado(2, 3, soma)
+var numero = multiplicacao(2, 6)
+
+console.log(numero)
+
+
+function numeroParImpar(numero){
+    if(numero % 2 == 0){
+        console.log('O número é par!')
+    } else{
+        console.log('O número é impar!')
+    }
+}
+
+numeroParImpar(10)
+
+
+function idadeVoto(idade){
+    if(idade >= 18 && idade <= 70){
+        console.log('O voto é obrigatório!')
+    } else{
+        console.log('O voto é opcional!')
+    }
+}
+
+idadeVoto(71)
