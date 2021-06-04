@@ -1,54 +1,61 @@
 
-//Exercício 1
-function maiorNumero(numeroA, numeroB){
+//exercício 1
+function maiorMenorNumero(numero1, numero2){
     maior = null
-    menor = null    
-    if(numeroA > numeroB){
-        maior = numeroA
-        menor = numeroB
-        } else{
-            menor = numeroA
-            maior = numeroB
-        }
-    return `O maior número é o ${maior} e o menor é o ${menor}`   
+    menor = null
+    if(numero1 > numero2){
+        maior = numero1
+        menor = numero2
+    } else{
+        maior = numero2
+        menor = numero1
+    }
+
+    console.log(`O maior número é o ${maior} e o menor número é o ${menor}`)
 
 }
 
-console.log(maiorNumero(9, 8))
+maiorMenorNumero(3, 5)
 
 
-//Exercício 2
-function mesContador(contador){
-    var array = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+//exercício 2
 
-    resultado = contador - 1
+function diaSemana(contador){
 
-    console.log(array[resultado])
+    array = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+
+    contador = contador - 1
+
+    console.log(array[contador])
 
 }
 
-mesContador(9)
+diaSemana(1)
+
 
 
 //Exercício 3
-function salario(diasTrabalhados, valorRecebido){
-        return diasTrabalhados * valorRecebido
+
+function salario(diasTrabalhados, valor){
+    return diasTrabalhados * valor
 }
 
-imprimirSalario = function(nome, valor, dias, operacao){
+imprimirSalario = function(nome, dias, valor, operacao){
     console.log(`O funcionário ${nome} recebe ${operacao(dias, valor)}`)
 }
 
-imprimirSalario('Roberto', 30, 15, salario)
+imprimirSalario('Roberto', 30, 80, salario)
 
 
-//Exercício 4
-function compararNumeros(numero1, Numero2){
-        if(typeof numero1 == typeof Numero2){
-            console.log('Números são do mesmo tipo')
+
+//Exercicio 4
+
+function compararNumero(numero1, numero2){
+        if(typeof numero1 == typeof numero2){
+            console.log("Variáveis são do mesmo tipo")
         } else{
-            console.log('Número não são do mesmo tipo')
+            console.log("Variáveis não são do mesmo tipo")
         }
 }
 
-compararNumeros(2, "6")
+compararNumero("aa", "bb")
