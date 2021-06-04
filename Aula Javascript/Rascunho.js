@@ -1,10 +1,25 @@
 
+//Exercício 1
+function maiorNumero(numeroA, numeroB){
+    maior = null
+    menor = null    
+    if(numeroA > numeroB){
+        maior = numeroA
+        menor = numeroB
+        } else{
+            menor = numeroA
+            maior = numeroB
+        }
+    return `O maior número é o ${maior} e o menor é o ${menor}`   
+
+}
+
+console.log(maiorNumero(9, 8))
 
 
-
-//1
+//Exercício 2
 function mesContador(contador){
-    var array = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+    var array = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
 
     resultado = contador - 1
 
@@ -15,45 +30,25 @@ function mesContador(contador){
 mesContador(9)
 
 
-function mediaAluno(notaA, notaB){
-    var media = (notaA + notaB) / 2
-    if(media >= 7){
-        console.log('Aprovado')
-    } else{
-        console.log('Reprovado')
-    }
+//Exercício 3
+function salario(diasTrabalhados, valorRecebido){
+        return diasTrabalhados * valorRecebido
 }
 
-mediaAluno(8, 3)
-
-
-function multiplicacao(a, b){
-    return a * b
-
+imprimirSalario = function(nome, valor, dias, operacao){
+    console.log(`O funcionário ${nome} recebe ${operacao(dias, valor)}`)
 }
 
-var numero = multiplicacao(2, 6)
-
-console.log(numero)
+imprimirSalario('Roberto', 30, 15, salario)
 
 
-function numeroParImpar(numero){
-    if(numero % 2 == 0){
-        console.log('O número é par!')
-    } else{
-        console.log('O número é impar!')
-    }
+//Exercício 4
+function compararNumeros(numero1, Numero2){
+        if(typeof numero1 == typeof Numero2){
+            console.log('Números são do mesmo tipo')
+        } else{
+            console.log('Número não são do mesmo tipo')
+        }
 }
 
-numeroParImpar(10)
-
-
-function idadeVoto(idade){
-    if(idade >= 18 && idade <= 70){
-        console.log('O voto é obrigatório!')
-    } else{
-        console.log('O voto é opcional!')
-    }
-}
-
-idadeVoto(71)
+compararNumeros(2, "6")
