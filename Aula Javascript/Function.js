@@ -120,3 +120,39 @@ function multiplicacao(a, b){
  imprimirMultiplicacaoB(3, 10, multiplicacao)
 
 
+ console.log('-----------------------------------FUNÇÃO ARROW------------------------------------------')
+
+//toda função arrow é uma função anônima
+//A ideia principal da função arrow é reduzir uma função de tamanho, deixa-a sintaticamente mais curta
+// função arrow reduzida tem um return implícito
+
+
+//função anônima
+var funcaoTriplo = function(numero){
+       return numero * 3
+}
+
+console.log("funcao anônima: ", funcaoTriplo(3))
+
+
+
+//função comum
+function funcaoTriplo2(numero){
+        return numero * 3
+}
+
+console.log("funcao comum", funcaoTriplo2(3))
+
+
+// função arrow
+var funcaoTriplo3 = (numero) => {
+        return numero * 3
+}
+
+console.log(`Função arrow: ${funcaoTriplo3(3)}`)
+
+
+//função arrow reduzida
+var funcaoTriplo4 = numero => numero * 3
+
+console.log(`Função arrow reduzida: ${funcaoTriplo4(3)}`)
