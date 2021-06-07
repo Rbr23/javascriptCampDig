@@ -59,15 +59,3 @@ function compararNumero(numero1, numero2){
 }
 
 compararNumero("aa", "bb")
-
-
-function teste(numero){
-    var resultado = ''
-    for(var i = 0; i < numero; i++){
-        resultado = resultado + "Campinho Digital " 
-    }
-
-    return resultado
-}
-
-console.log(teste(5))
