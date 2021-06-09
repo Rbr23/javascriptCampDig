@@ -1,61 +1,94 @@
 
-//exercício 1
-function maiorMenorNumero(numero1, numero2){
-    maior = null
-    menor = null
-    if(numero1 > numero2){
-        maior = numero1
-        menor = numero2
-    } else{
-        maior = numero2
-        menor = numero1
+//1
+function imprimirSoma(){
+    soma = null
+    for(var i = 1; i <= 100; i++){
+        if(i % 2 == 0){
+            soma = soma + i
+        }
     }
 
-    console.log(`O maior número é o ${maior} e o menor número é o ${menor}`)
+    console.log(soma)
 
 }
 
-maiorMenorNumero(3, 5)
+imprimirSoma()
+
+//2
+function funcaoRepetir(elemento, vezes){
+    array = []
+    for(var i = 0; i < vezes; i++){
+        array.push(elemento)
+    }
+
+    return array
+}
+
+console.log(funcaoRepetir('amigo', 5))
+
+//3
+function funcaoRepetirString(numero){
+    resultado = ""
+
+    for(var i = 0; i < numero; i++){
+        resultado = resultado + "Campinho Digital "
+    }
+
+    return resultado
+}
+
+console.log(funcaoRepetirString(3))
 
 
-//exercício 2
+//4
+numero = [2, 4, 5, 8, 9]
 
-function diaSemana(contador){
+//função comum
+function imprimirPrimeiroUltimo(array){
 
-    array = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+    primeiroElemento = array.shift()
+    ultimoElemento = array.pop()
 
-    contador--
-
-    console.log(array[contador])
+    return [primeiroElemento, ultimoElemento]
 
 }
 
-diaSemana(1)
+//console.log(imprimirPrimeiroUltimo(numero))
+
+//função arrow reduzida
+var funcaoReduzida = array => [array.shift(), array.pop()]
+
+console.log(funcaoReduzida(numero))
 
 
+//5
+conjuntos = ['Amigo', 2, true, 'Curso', 'Abraço', 7, 9, false, 5]
 
-//Exercício 3
-
-function salario(diasTrabalhados, valor){
-    return diasTrabalhados * valor
-}
-
-imprimirSalario = function(nome, dias, valor, operacao){
-    console.log(`O funcionário ${nome} recebe ${operacao(dias, valor)}`)
-}
-
-imprimirSalario('Roberto', 30, 80, salario)
-
-
-
-//Exercicio 4
-
-function compararNumero(numero1, numero2){
-        if(typeof numero1 == typeof numero2){
-            console.log("Variáveis são do mesmo tipo")
-        } else{
-            console.log("Variáveis não são do mesmo tipo")
+function funcaoSelecao(array){
+    arrayResultado = []
+    for(var i = 0; i < array.length; i++){
+        if(typeof array[i] == 'number'){
+            arrayResultado.push(array[i])
         }
+    }
+
+    return arrayResultado
 }
 
-compararNumero("aa", "bb")
+console.log(funcaoSelecao(conjuntos))
+
+
+//6
+conjuntoNumeros = [1, 7, 4, 9, 10, 22, 12, 15]
+
+function funcaoImparesPares(array){
+    for(var i = 0; i < array.length; i++){
+        if(array[i] % 2 == 0){
+            console.log("Esse número é par", array[i])
+        } else{
+            console.log("Esse número é impar!", array[i])
+        }
+    }
+}
+
+funcaoImparesPares(conjuntoNumeros)

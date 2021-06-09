@@ -21,11 +21,22 @@ terceira área: incrementador. Ele vai incrementar a variável declarada na prim
 
 
 
+
+
+
+
 //Preciso percorrer cada número de 1 a 10
+
 
 for(var i = 1; i <= 10; i++){
     //console.log(`Número ${i}`)
 }
+
+
+
+
+
+
 
 
 for(var i = 5; i <= 20; i++){
@@ -114,4 +125,12 @@ console.log("-------------------------------------------------------------------
 
 for(elementos in arrayConjuntos){
     console.log(arrayConjuntos[elementos], " - iteração com for automático")
+}
+
+
+
+
+
+for(var i = 5; i <= 10; i++){
+    console.log(`Número ${i}`)
 }
