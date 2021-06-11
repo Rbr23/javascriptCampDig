@@ -1,94 +1,161 @@
 
+
 //1
-function imprimirSoma(){
-    soma = null
-    for(var i = 1; i <= 100; i++){
-        if(i % 2 == 0){
-            soma = soma + i
-        }
+function inversao(valor){
+    var tipo = typeof valor
+
+    if(tipo == "boolean"){
+        return !valor
+    } else if(tipo == "number"){
+        return -valor
+    } else{
+        return "valor inválido!"
     }
-
-    console.log(soma)
-
 }
 
-imprimirSoma()
+var valor = true
+console.log(inversao([]))
+
 
 //2
-function funcaoRepetir(elemento, vezes){
-    array = []
-    for(var i = 0; i < vezes; i++){
-        array.push(elemento)
-    }
+var array = [2, 5, 1, 9, 10, 8, 3, 5, 2 , 19]
+var array2 = [2, 5, 7, 9]
 
-    return array
+function primeiroUltimo(array){
+    return [array[0], array[array.length - 1]]
 }
 
-console.log(funcaoRepetir('amigo', 5))
+console.log(primeiroUltimo(array))
+console.log(primeiroUltimo(array2))
 
 //3
-function funcaoRepetirString(numero){
-    resultado = ""
+ function saudacao(cumprimento){
+    if(cumprimento.toLowerCase() == "manhã"){
+        return "Bom dia!"
+    } else if(cumprimento.toLowerCase() == "tarde"){
+        return "Boa tarde!"
+    } else if(cumprimento.toLowerCase() == "noite"){
+        return "Boa noite!"
+    } else {
+        return "Valor inválido!"
+    }
+ }
 
-    for(var i = 0; i < numero; i++){
-        resultado = resultado + "Campinho Digital "
+ console.log(saudacao("NOITE"))
+
+ //4
+ function numeroAoQuadrado(numero){
+        //return numero * numero
+        return numero **2
+ }
+
+ numero = numeroAoQuadrado(9)
+ console.log(numero)
+
+ //5
+function notas(notaA, notaB){
+    var media = (notaA + notaB)/2
+
+    if(media < 5){
+        console.log("Reprovado!")
+    } else if (media == 5){
+        console.log("Recuperação!")
+    } else if (media > 5 && media <= 7){
+        console.log("Aprovado!")
+    } else {
+        console.log("Aprovado com louvor!")
     }
 
-    return resultado
 }
 
-console.log(funcaoRepetirString(3))
+notas(1, 3)
+
+
+
+//EXERCÍCIO DO DIA 10.06
+//1
+function numeroImpar(){
+    for(var i = 1; i <= 150; i++){
+        if(i % 2 != 0){
+            console.log("Número impar!", i)
+        }
+    }
+}
+
+numeroImpar()
+
+//2
+
+
+
+
+//3
+function tabuada(numero){
+    if(numero > 1 && numero <= 10){
+        for(var i = 1; i <=10; i++){
+            console.log(i * numero)
+        }
+    } else{
+        console.log("Número inválido!")
+    }
+}
+
+tabuada(5)
 
 
 //4
-numero = [2, 4, 5, 8, 9]
-
-//função comum
-function imprimirPrimeiroUltimo(array){
-
-    primeiroElemento = array.shift()
-    ultimoElemento = array.pop()
-
-    return [primeiroElemento, ultimoElemento]
-
+function numeroAoQuadrado(numero){
+    //return numero * numero
+    return numero **2
 }
 
-//console.log(imprimirPrimeiroUltimo(numero))
+numero = numeroAoQuadrado(9)
+console.log(numero)
 
-//função arrow reduzida
-var funcaoReduzida = array => [array.shift(), array.pop()]
 
-console.log(funcaoReduzida(numero))
+numeroElevado = numero => numero **2
 
+console.log(numeroElevado(6))
 
 //5
-conjuntos = ['Amigo', 2, true, 'Curso', 'Abraço', 7, 9, false, 5]
 
-function funcaoSelecao(array){
-    arrayResultado = []
-    for(var i = 0; i < array.length; i++){
-        if(typeof array[i] == 'number'){
-            arrayResultado.push(array[i])
-        }
+//função comum
+function notas(notaA, notaB){
+    var media = (notaA + notaB)/2
+
+    if(media < 5){
+        console.log("Reprovado!")
+    } else if (media == 5){
+        console.log("Recuperação!")
+    } else if (media > 5 && media <= 7){
+        console.log("Aprovado!")
+    } else {
+        console.log("Aprovado com louvor!")
     }
 
-    return arrayResultado
 }
 
-console.log(funcaoSelecao(conjuntos))
+//função anônima
 
+function funcaoMedia(notaA, notab){
+    return (notaA + notab)/2
+}
 
-//6
-conjuntoNumeros = [1, 7, 4, 9, 10, 22, 12, 15]
-
-function funcaoImparesPares(array){
-    for(var i = 0; i < array.length; i++){
-        if(array[i] % 2 == 0){
-            console.log("Esse número é par", array[i])
-        } else{
-            console.log("Esse número é impar!", array[i])
-        }
+var imprimirMedia = function(notaA, notaB, funcao){
+    var media = funcao(notaA, notaB)
+    if(media < 5){
+        console.log("Reprovado!")
+    } else if (media == 5){
+        console.log("Recuperação!")
+    } else if (media > 5 && media <= 7){
+        console.log("Aprovado!")
+    } else {
+        console.log("Aprovado com louvor!")
     }
 }
 
-funcaoImparesPares(conjuntoNumeros)
+imprimirMedia(4, 8, funcaoMedia)
+
+
+
+

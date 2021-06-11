@@ -106,6 +106,10 @@ for(atributo in funcionario){
 
 var arrayConjuntos = ["número", "javascript", 7, 9, 1, true, false]
 
+arrayConjuntos[0]
+arrayConjuntos[1]
+arrayConjuntos[2]
+
 for(var i = 0; i < arrayConjuntos.length; i++){
     console.log(arrayConjuntos[i], " - iteração com for manual")
 }
@@ -131,6 +135,4 @@ for(elementos in arrayConjuntos){
 
 
 
-for(var i = 5; i <= 10; i++){
-    console.log(`Número ${i}`)
-}
+
