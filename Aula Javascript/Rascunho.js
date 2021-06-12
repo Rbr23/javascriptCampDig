@@ -72,6 +72,9 @@ notas(1, 3)
 
 
 
+
+
+
 //EXERCÍCIO DO DIA 10.06
 //1
 function numeroImpar(){
