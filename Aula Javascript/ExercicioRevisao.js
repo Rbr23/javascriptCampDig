@@ -237,7 +237,6 @@ console.log(arrayElementos[5] * arrayElementos[7].conjunto[0])
 
 
 
-
 console.log("EXERCÍCIO SEMANAL SOBRE OPERADORES-FUNÇÃO")
 
 //EXERCÍCIO SEMANAL SOBRE OPERADORES-FUNÇÃO
@@ -274,3 +273,83 @@ console.log(condicaoVerdadeiro && condicaoFalso)
 //5
 console.log(condicaoFalso || !condicaoVerdadeiro)
 console.log(condicaoVerdadeiro && !condicaoFalso)
+
+
+
+
+
+console.log("EXERCÍCIO SEMANAL SOBRE CONDICIONAIS-FUNÇÃO")
+
+//EXERCÍCIO SEMANAL SOBRE CONDICIONAIS-FUNÇÃO
+
+
+
+//1
+function inversao(valor){
+    var tipo = typeof valor
+
+    if(tipo == "boolean"){
+        return !valor
+    } else if(tipo == "number"){
+        return -valor
+    } else{
+        return "valor inválido!"
+    }
+}
+
+var valor = true
+console.log(inversao([]))
+
+
+//2
+var array = [2, 5, 1, 9, 10, 8, 3, 5, 2 , 19]
+var array2 = [2, 5, 7, 9]
+
+function primeiroUltimo(array){
+    return [array[0], array[array.length - 1]]
+}
+
+console.log(primeiroUltimo(array))
+console.log(primeiroUltimo(array2))
+
+//3
+ function saudacao(cumprimento){
+    if(cumprimento.toLowerCase() == "manhã"){
+        return "Bom dia!"
+    } else if(cumprimento.toLowerCase() == "tarde"){
+        return "Boa tarde!"
+    } else if(cumprimento.toLowerCase() == "noite"){
+        return "Boa noite!"
+    } else {
+        return "Valor inválido!"
+    }
+ }
+
+ console.log(saudacao("NOITE"))
+
+ //4
+ function numeroAoQuadrado(numero){
+        //return numero * numero
+        return numero **2
+ }
+
+ numero = numeroAoQuadrado(9)
+ console.log(numero)
+
+ //5
+function notas(notaA, notaB){
+    var media = (notaA + notaB)/2
+
+    if(media < 5){
+        console.log("Reprovado!")
+    } else if (media == 5){
+        console.log("Recuperação!")
+    } else if (media > 5 && media <= 7){
+        console.log("Aprovado!")
+    } else {
+        console.log("Aprovado com louvor!")
+    }
+
+}
+
+notas(1, 3)
