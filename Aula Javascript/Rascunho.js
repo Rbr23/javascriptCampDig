@@ -1,164 +1,88 @@
 
-
 //1
-function inversao(valor){
-    var tipo = typeof valor
 
-    if(tipo == "boolean"){
-        return !valor
-    } else if(tipo == "number"){
-        return -valor
-    } else{
-        return "valor inválido!"
-    }
-}
-
-var valor = true
-console.log(inversao([]))
-
-
-//2
-var array = [2, 5, 1, 9, 10, 8, 3, 5, 2 , 19]
-var array2 = [2, 5, 7, 9]
-
-function primeiroUltimo(array){
-    return [array[0], array[array.length - 1]]
-}
-
-console.log(primeiroUltimo(array))
-console.log(primeiroUltimo(array2))
-
-//3
- function saudacao(cumprimento){
-    if(cumprimento.toLowerCase() == "manhã"){
-        return "Bom dia!"
-    } else if(cumprimento.toLowerCase() == "tarde"){
-        return "Boa tarde!"
-    } else if(cumprimento.toLowerCase() == "noite"){
-        return "Boa noite!"
-    } else {
-        return "Valor inválido!"
-    }
- }
-
- console.log(saudacao("NOITE"))
-
- //4
- function numeroAoQuadrado(numero){
-        //return numero * numero
-        return numero **2
- }
-
- numero = numeroAoQuadrado(9)
- console.log(numero)
-
- //5
-function notas(notaA, notaB){
-    var media = (notaA + notaB)/2
-
-    if(media < 5){
-        console.log("Reprovado!")
-    } else if (media == 5){
-        console.log("Recuperação!")
-    } else if (media > 5 && media <= 7){
-        console.log("Aprovado!")
-    } else {
-        console.log("Aprovado com louvor!")
-    }
-
-}
-
-notas(1, 3)
-
-
-
-
-
-
-//EXERCÍCIO DO DIA 10.06
-//1
-function numeroImpar(){
-    for(var i = 1; i <= 150; i++){
+function somaImpar(){
+    soma = null
+    for(var i = 30; i <= 100; i++){
         if(i % 2 != 0){
-            console.log("Número impar!", i)
+            soma += i //soma = soma + i
         }
     }
+
+    console.log(soma)
+
 }
 
-numeroImpar()
+somaImpar()
 
 //2
-
-
-
-
-//3
-function tabuada(numero){
-    if(numero > 1 && numero <= 10){
-        for(var i = 1; i <=10; i++){
-            console.log(i * numero)
-        }
-    } else{
-        console.log("Número inválido!")
+function reajusteSalarial(salario){
+    var taxa = null
+    if(salario <= 280){
+        taxa = 0.25
+    } else if(salario > 280 && salario <=700){
+        taxa = 0.20
+    }else if(salario > 700 && salario <=1500){
+        taxa = 0.15
+    }else if(salario > 1500){
+        taxa = 0.10
     }
+
+    salarioNovo = salario + (salario * taxa)
+
+    return `Percentual de aumento aplicado: ${taxa.toFixed(2)}%
+            Salário antes do aumento: ${salario}
+            Valor de aumento: ${salario*taxa}
+            Novo salário após o aumento: ${salarioNovo}
+    `
+
 }
 
-tabuada(5)
+console.log(reajusteSalarial(1600))
+
+//3
+
+array = [5, 1, 9, 2, 6, 3, 8, 4, 7, 5, 3, 8, 1, 2, 8, 9, 4, 3, 2, 1,4 ,3 ,7,9]
+
+function somaArray(array){
+    soma = null
+    for(var i = 0; i < array.length; i++){
+        soma += array[i]
+    }
+    return soma
+}
+
+console.log(somaArray(array))
 
 
 //4
-function numeroAoQuadrado(numero){
-    //return numero * numero
-    return numero **2
+
+function valorMaior(array){
+    var valorMaximo = array[0]
+    for(var i = 0; i < array.length; i++){
+        if(array[i] > valorMaximo){
+            valorMaximo = array[i]
+        }
+    }
+
+    return valorMaximo
 }
 
-numero = numeroAoQuadrado(9)
-console.log(numero)
-
-
-numeroElevado = numero => numero **2
-
-console.log(numeroElevado(6))
+console.log(valorMaior(array))
 
 //5
 
-//função comum
-function notas(notaA, notaB){
-    var media = (notaA + notaB)/2
+var numeros = [1, 2, 3, 4, 0, 6, 7, 8, 9]
 
-    if(media < 5){
-        console.log("Reprovado!")
-    } else if (media == 5){
-        console.log("Recuperação!")
-    } else if (media > 5 && media <= 7){
-        console.log("Aprovado!")
-    } else {
-        console.log("Aprovado com louvor!")
+function inverterArray(array){
+    var resultado = []
+    for(var i = array.length - 1; i >= 0; i--){
+        resultado.push(array[i])
     }
 
+    return resultado
+    
 }
 
-//função anônima
 
-function funcaoMedia(notaA, notab){
-    return (notaA + notab)/2
-}
-
-var imprimirMedia = function(notaA, notaB, funcao){
-    var media = funcao(notaA, notaB)
-    if(media < 5){
-        console.log("Reprovado!")
-    } else if (media == 5){
-        console.log("Recuperação!")
-    } else if (media > 5 && media <= 7){
-        console.log("Aprovado!")
-    } else {
-        console.log("Aprovado com louvor!")
-    }
-}
-
-imprimirMedia(4, 8, funcaoMedia)
-
-
-
-
+console.log(inverterArray(numeros))
