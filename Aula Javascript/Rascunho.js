@@ -1,88 +1,95 @@
 
-//1
 
-function somaImpar(){
-    soma = null
-    for(var i = 30; i <= 100; i++){
-        if(i % 2 != 0){
-            soma += i //soma = soma + i
+//1
+function retornoString(numero){
+    resultado = ""
+    for(var i = 1; i <= numero; i++){
+          resultado = resultado + " + "
+    }
+
+    return resultado
+
+}
+
+
+console.log(retornoString(100))
+
+
+//2
+var array2 = [2, 6, "amigo", true]
+
+function numeroArray(array){
+    arrayResultado = []
+    for(var i = 0; i < array.length; i++){
+        if(typeof array[i] == 'boolean'){
+            arrayResultado.push(array2[i])
         }
     }
 
-    console.log(soma)
-
+    return arrayResultado
 }
 
-somaImpar()
+console.log(numeroArray(array2))
 
-//2
-function reajusteSalarial(salario){
-    var taxa = null
-    if(salario <= 280){
-        taxa = 0.25
-    } else if(salario > 280 && salario <=700){
-        taxa = 0.20
-    }else if(salario > 700 && salario <=1500){
-        taxa = 0.15
-    }else if(salario > 1500){
-        taxa = 0.10
-    }
-
-    salarioNovo = salario + (salario * taxa)
-
-    return `Percentual de aumento aplicado: ${taxa.toFixed(2)}%
-            Salário antes do aumento: ${salario}
-            Valor de aumento: ${salario*taxa}
-            Novo salário após o aumento: ${salarioNovo}
-    `
-
-}
-
-console.log(reajusteSalarial(1600))
 
 //3
+//EXERCÍCIO 4 DO DIA 15
+function valorMaximo(array){
+    max = array[0]
+    for(var i = 0; i < array.length; i++){
+        if(array[i] > max){
+            max = array[i]
+        }
+    }
 
-array = [5, 1, 9, 2, 6, 3, 8, 4, 7, 5, 3, 8, 1, 2, 8, 9, 4, 3, 2, 1,4 ,3 ,7,9]
+    return max
+}
 
-function somaArray(array){
+//FUNÇÃO ARROW
+console.log(valorMaximo([3, 1, 7, 8, 9]))
+
+var imprimirValor = (array) => {
+    max = array[0]
+    for(var i = 0; i < array.length; i++){
+        if(array[i] > max){
+            max = array[i]
+        }
+    }
+
+    return max
+}
+
+
+//4
+function tabuada(){
+    for(var i = 1; i <= 10; i++){
+        
+        for(var y = 1; y <= 10; y++){
+            console.log(`${i} x ${y} = ${i * y}`)
+        }
+
+        console.log("------------------")
+
+    }
+}
+
+tabuada()
+
+arrayMedia = [3, 4, 5]
+
+//5
+function mediaArray(array){
+
+    //soma = 12
     soma = null
     for(var i = 0; i < array.length; i++){
         soma += array[i]
     }
-    return soma
+
+    //   media = 12 / 3
+         media = soma / array.length
+
+     console.log("A média é de ", media)
 }
 
-console.log(somaArray(array))
-
-
-//4
-
-function valorMaior(array){
-    var valorMaximo = array[0]
-    for(var i = 0; i < array.length; i++){
-        if(array[i] > valorMaximo){
-            valorMaximo = array[i]
-        }
-    }
-
-    return valorMaximo
-}
-
-console.log(valorMaior(array))
-
-//5
-
-var numeros = [1, 2, 3, 4, 0, 6, 7, 8, 9]
-
-function inverterArray(array){
-    var resultado = []
-    for(var i = array.length - 1; i >= 0; i--){
-        resultado.push(array[i])
-    }
-
-    return resultado
-    
-}
-
-
-console.log(inverterArray(numeros))
+mediaArray(arrayMedia)
