@@ -86,11 +86,6 @@ for(i in notas){
 
 
 
-
-
-
-
-
 var funcionario = {
     nome: 'Roberto',
     profissao: 'Professor',

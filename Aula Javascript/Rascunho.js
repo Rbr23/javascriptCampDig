@@ -95,16 +95,34 @@ function mediaArray(array){
 mediaArray(arrayMedia)
 
 
-var readline = require('readline');
-var resp = "";
+function reajusteSalarial(salario){
+    reajuste = null
+    switch(salario){
+        case 1:
+            reajuste = 0.25
+            console.log("AAAAAAAAAA")
+            break
+        case salario > 280 && salario <= 700:
+            reajuste = 0.20
+            break
+        case salario > 700 && salario <= 1500:
+            reajuste = 0.15
+            break
+        case salario > 1500:
+            reajuste = 0.10
+            break            
+    }
 
-var leitor = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+    salarioNovo = salario + salario * reajuste
+    return `Percentual aplicado: ${reajuste}
+            Salário antes do aumento: ${salario}
+            Salário antes do aumento: ${salario * reajuste}
+            Novo salário após o aumento ${salarioNovo}`
 
-leitor.question("Qual módulo pra ler dados no node.js?\n", function(answer) {
-    var resp = answer;
-    console.log("\nSua resposta '" + resp + "' foi grava com sucesso numa variável inútil");
-    leitor.close();
-});
+}
+
+console.log(reajusteSalarial(1))
+
+
+
+

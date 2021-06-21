@@ -80,11 +80,6 @@ do{
 
 
 
-
-
-
-
-
 var alunos = [
 
     {aluno:"João", nota:1},
@@ -110,3 +105,5 @@ do{
 media = somaNotas / totalAlunos
 
 console.log(media)
+
+
