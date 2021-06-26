@@ -95,6 +95,11 @@ var totalAlunos = alunos.length
 var somaNotas = 0
 
 
+
+
+
+
+
 do{
     somaNotas += alunos[incrementador].nota
 

@@ -59,7 +59,7 @@ var NOME1 = "Rogério"
 
 var nome1 = "Mauricio"
 
-//Na criação de variável, não é permitido espaços, acentuação e números são permitidos, desde que sejam precedidos por letras. 
+//Na criação de variável não é permitido espaços, acentuação não é permitido e números são permitidos, desde que sejam precedidos por letras. 
 //Em javascript, adotamos o padrão camelCase. Por exemplo:
 
 var numero = 6
@@ -72,8 +72,6 @@ var numeroTrabalhadores = 12
 //ESCOPO GLOBAL É QUANDO A VARIÁVEL FICA DISPONÍVEL EM QUALQUER ÁREA DO CÓDIGO, PARA SEU ACESSO. 
 
 //ESCOPO LOCAL É QUANDO A VARIÁVEL FICA RESTRITA APENAS A UMA ÁREA DO CÓDIGO, TENDO SEU ACESSO RESTRINGIDO A UMA PARTE ESPECÍFICA.
-
-
 
 
 //DECLARAÇÃO COM VAR -> DECLARAÇÃO DE VARIÁVEIS 
@@ -124,8 +122,59 @@ for(i = 0; i < 10; i++){
 console.log(escola)
 
 
+
+
+
 //escopo global = var, const, let
 
 //escopo de função -> escopo local = var, const, let
 
 //escopo de bloco -> escopo local = let, const
+
+
+var nomeProfessor = "Luciana" //variáveis criadas com VAR têm escopo global ou escopo de função
+
+if(true){
+    
+}
+
+console.log(trabalho)
+
+
+//ESCOPO GLOBAL
+
+// ESCOPO DE FUNÇÃO -> ESCOPO LOCAL
+
+function teste1(){ // escopo local
+    this.nome = "Aline"
+}
+
+console.log(nome)
+
+
+
+const nomeAluno = "Rodolfo"
+
+
+var escolaSP = "e.r"
+
+var escolaSP = "O.P"
+
+
+let a = 2
+let a = 3
+
+{ let escolaSP = "O.P" }
+
+console.log(escolaSP)
+
+
+//ESCOPO GLOBAL
+
+//ESCOPO LOCAL
+
+
+//ESCOPO DE FUNÇÃO -> ESCOPO LOCAL
+
+
+//ESCOPO DE BLOCO -> ESCOPO LOCAL -> LET

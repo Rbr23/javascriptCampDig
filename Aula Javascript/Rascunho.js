@@ -18,6 +18,7 @@ numerosPares(10)
 
 
 
+/*
 //Questão do Lucas
 var escola = [
     {aluno:'Bia', notas: 4},
@@ -38,7 +39,7 @@ var escola = [
  media = somando / totalAlunos
  console.log(media)
 
-
+*/
 
 
  //Questão do Lucas
@@ -51,3 +52,7 @@ var escola = [
  }
  
  tabudada(2,5)
+
+
+
+
