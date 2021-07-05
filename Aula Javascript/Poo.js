@@ -139,9 +139,52 @@ const pessoa = {
 
 }
 
+
 console.log(pessoa.nomeCompleto = "Marcos Ribeiro")
 
 
+console.log("-----------------------------------------HERANÇA----------------------------------------------")
 
+//Classe, em poo, é utilizada para representar atributos e métodos dos objetos
 
+//classe pai 
+class mamifero{
+    constructor(especie, nome, idade){
+        this.especie = especie
+        this.nome = nome
+        this.idade = idade
+        this.glandulasMamarias = true
+        this.pelo = true
+    }
 
+}
+
+class humano extends mamifero{
+    constructor(especie, nome, idade, profissao){
+        super(especie, nome, idade)
+        this.profissao = profissao
+        this.bipede = true
+    }
+
+}
+
+class felino extends mamifero{
+    constructor(especie, nome, idade){
+        super(especie, nome, idade)
+        this.calda = true
+        this.quadrupede = true
+    }
+}
+
+var Roberto = new humano("homo sapiens", "Roberto", 29, "professor")
+var Luciana = new humano("homo sapiens", "Luciana", 29, "professora")
+
+var funcionarioCampinho = new humano("homo sapiens", "Susie", 29, "monitora")
+
+var leao = new felino("felino", "Zeca", 4)
+
+var leopardo = new felino("felino", "babu", 3)
+
+console.log(funcionarioCampinho)
+
+console.log(leao)
