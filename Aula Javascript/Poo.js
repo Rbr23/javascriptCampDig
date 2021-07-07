@@ -188,3 +188,20 @@ var leopardo = new felino("felino", "babu", 3)
 console.log(funcionarioCampinho)
 
 console.log(leao)
+
+
+function contra(a){
+    if(typeof(a) == "number"){
+        return (a - (2 * a))
+    }
+}
+
+console.log(contra(35))
+
+
+
+
+
+
+
+

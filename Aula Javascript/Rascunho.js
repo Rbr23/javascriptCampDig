@@ -1,57 +1,125 @@
 
 
 
-function numerosPares(numero){
-    contador = 1
-    while(contador <= numero){
-        if(contador % 2 == 0){
-            console.log("Número par:", contador)
-        } else{
-            console.log("Número impar:", contador)
-        }
-        contador++
-    }
-    
-}
-
-numerosPares(10)
-
-
 
 /*
-//Questão do Lucas
-var escola = [
-    {aluno:'Bia', notas: 4},
-    {aluno:'Lucas', notas:2},
-    {aluno:'Juliana', notas:3},
-    {aluno:'Ricado', notas:10},
-    {aluno:'Leticia', notas:9}
- ]
- var contador = 0
- var totalAlunos = escola.length
- var somando = 0
- 
- do{
-   somando += escola[contador].notas
-   notaAlunos++
- }while(contador < totalAlunos)
- 
- media = somando / totalAlunos
- console.log(media)
+
+  POO
+
+  .ABSTRAÇÃO: 
+
+
+  CARRO: 
+  marca (características - atributo)
+  modelo (características - atributo)
+  ano (características - atributo)
+
+  ligar (comportamento - método)
+
+  desligar (comportamento - método)
+
+  .ENCAPSULAMENTO:
+
+*/
+
+/*
+const FOX = {
+    _marca: "FORD",
+    _modelo: "KA",
+    _ano: 2009,
+
+    get marca(){
+        return this._marca
+    },
+
+    set marca(valor){
+        this._marca = valor
+    },
+    
+
+    ligar:function(desligar){
+        if(desligar > 0){
+            console.log("Carro está ligado")
+    }
+    },
+
+    desligar:function(){
+        console.log("Carro está desligado!")
+    }
+
+}
+
+
+
+
+const BMW = {
+    _marca: "BMW",
+    _modelo: "X9",
+    _ano: 2020,
+
+    get marca(){
+        return this._marca
+    },
+
+    set marca(valor){
+        this._marca = valor
+    },
+    
+
+    ligar:function(desligar){
+        if(desligar > 0){
+            console.log("Carro está ligado")
+    }
+    },
+
+    desligar:function(){
+        console.log("Carro está desligado!")
+    }
+
+}
+
 
 */
 
 
- //Questão do Lucas
- function tabudada(dois,cinco){
-    for(var i = dois; i <= cinco ; i++){
-       for(var w = dois; w <= cinco; w++){
-          console.log(`${i} x ${w} = ${i * w}`)
-       }
+
+class carro{
+    #marca
+    #modelo
+    #ano
+    constructor(marca, modelo, ano){
+        this.#marca = marca
+        this.#modelo = modelo
+        this.#ano = ano
     }
- }
- 
- tabudada(2,5)
+
+    get marca(){
+        return this.#marca
+    }
+
+    set marca(valor){
+        this.#marca = valor
+    }
+
+    get modelo(){
+        return this.#modelo
+    }
+
+    set modelo(valor){
+        this.#modelo = valor
+    }
+    
+
+}
+
+const fox = new carro("Volkswagen", "Fox", 2009)
+
+const fusca = new carro("Volkswagen", "fusca", 1990)
+
+const bmw = new carro("BMW", "X9", 2020)
+
+
+console.log(fox.modelo)
 
 
 

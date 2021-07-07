@@ -62,11 +62,11 @@ function gerenciarLanchonete(obj){
 
     }
 }
-lucro = soma - imposto
-console.log("................................................")
-console.log(`O valor total gerado foi de R$ ${soma}
-o lucro de Sr José foi de R$ ${lucro} 
-e o imposto pago é de ${imposto}`) 
+    lucro = soma - imposto
+    console.log("................................................")
+    console.log(`O valor total gerado foi de R$ ${soma}
+    o lucro de Sr José foi de R$ ${lucro} 
+    e o imposto pago é de ${imposto}`) 
 
 
 
