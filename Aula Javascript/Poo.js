@@ -146,7 +146,7 @@ console.log(pessoa.nomeCompleto = "Marcos Ribeiro")
 console.log("-----------------------------------------HERANÇA----------------------------------------------")
 
 //Classe, em poo, é utilizada para representar atributos e métodos dos objetos
-
+/*
 //classe pai 
 class mamifero{
     constructor(especie, nome, idade){
@@ -157,6 +157,7 @@ class mamifero{
         this.pelo = true
     }
 
+
 }
 
 class humano extends mamifero{
@@ -165,6 +166,9 @@ class humano extends mamifero{
         this.profissao = profissao
         this.bipede = true
     }
+
+
+
 
 }
 
@@ -185,23 +189,72 @@ var leao = new felino("felino", "Zeca", 4)
 
 var leopardo = new felino("felino", "babu", 3)
 
-console.log(funcionarioCampinho)
+*/
+console.log("-------------------------------------------------POLIMORFISMO--------------------------------------------------------------")
 
-console.log(leao)
+
+//Polimorfismo é quando queremos que os filhos se comportem diferentes dos seus pais, ou seja, temos os mesmos métodos, com os mesmos nomes, mas com diferentes comportamentos
 
 
-function contra(a){
-    if(typeof(a) == "number"){
-        return (a - (2 * a))
+
+
+//classe pai 
+class mamifero{
+    constructor(especie, nome, idade){
+        this.especie = especie
+        this.nome = nome
+        this.idade = idade
+        this.glandulasMamarias = true
+        this.pelo = true
+    }
+
+    emitirSom(){
+        console.log("Estou emitindo som!")
+    }
+
+}
+
+//classe filho
+class humano extends mamifero{
+    constructor(especie, nome, idade, profissao){
+        super(especie, nome, idade)
+        this.profissao = profissao
+        this.bipede = true
+    }
+
+    emitirSom(){
+        console.log("Eu sou humano e estou emitindo som!")
+    }
+
+
+}
+
+//classe filho
+class felino extends mamifero{
+    constructor(especie, nome, idade){
+        super(especie, nome, idade)
+        this.calda = true
+        this.quadrupede = true
+    }
+
+    emitirSom(){
+        console.log("Eu sou felino e estou emitindo som")
     }
 }
 
-console.log(contra(35))
+
+var leao = new felino("felino", "Rex", 5)
+
+var amigo = new humano("homo sapiens", "Roberto", 29)
+
+var animal = new mamifero("mamifero", "zeca", 30)
 
 
 
 
 
+console.log(animal.emitirSom())
 
+console.log(leao.emitirSom())
 
-
+console.log(amigo.emitirSom())

@@ -112,6 +112,7 @@ class carro{
 
 }
 
+
 const fox = new carro("Volkswagen", "Fox", 2009)
 
 const fusca = new carro("Volkswagen", "fusca", 1990)
@@ -121,6 +122,64 @@ const bmw = new carro("BMW", "X9", 2020)
 
 console.log(fox.modelo)
 
+
+
+
+class pessoa{
+    #nome
+    #idade
+    #profissao
+    #bipede
+    #condicaoFisica
+    constructor(nome, idade, profissao, condicaoFisica){
+        this.#nome = nome
+        this.#idade = idade
+        this.#profissao = profissao
+        this.bipede = true
+        this.#condicaoFisica = condicaoFisica
+    }
+
+    get nome(){
+        return this.#nome
+    }
+
+    set nome(valor){
+        this.#nome = valor
+    }
+
+    get idade(){
+        return this.#idade
+    }
+
+
+}
+
+
+
+const roberto = new pessoa("Robyrto", 29, "Professor")
+
+const ligia = new pessoa("ligia", 29, "Coordenadora")
+
+const susie = new pessoa("Susie", 29, "Monitora")
+
+console.log(roberto.nome = "Roberto")
+
+
+
+
+function imprimirNome(nome){
+    console.log(nome)
+}
+
+imprimirNome("Roberto")
+
+
+
+
+function teste(){
+    this.nome = 12
+
+}
 
 
 
