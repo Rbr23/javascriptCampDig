@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case</title>
+    <style>
+        h1 {
+            color: rgb(7, 7, 248);
+        }
+
+        p {
+            color: chartreuse;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Criando meu case</h1>
+    <p>Trabalhando com elementos visuais dentro do html com o case feito em sala de aula</p>
+
+    <script>
+
+        class produto{
+            #codigo
+            constructor(codigo){
+                this.#codigo = codigo
+            }
+
+            get codigo(){
+                return this.#codigo
+            }
+
+            set codigo(valor){
+                this.#codigo = valor
+            }
+
+        }
+
+        class cliente extends produto{
+            #nome
+            constructor(nome){
+                super(codigo)
+                this.#nome = nome
+            }
+
+            get nome(){
+                return this.#nome
+            }
+
+            set nome(valor){
+                this.#nome = valor
+            }
+        }
+
+        arrayCliente = []
+        numeroCliente = window.prompt("Digite o número de clientes que você quer cadastrar: ")
+        contador = 0
+        do{ 
+            try{
+                nomeCliente = window.prompt("Nome do cliente: ")
+                codigo = window.prompt("Código do produto: ")
+                clientes = new cliente(nomeCliente, codigo)
+                arrayCliente.push(clientes)
+                contador++
+            }catch(error){
+                window.alert(error)
+            }
+            
+        }while(contador < numeroCliente)
+
+
+
+
+
+    function gerenciarLanchonete(array){
+    soma = null  
+    imposto = null 
+    for(let i = 0; i < array.length; i++){
+   
+     if(array[i].codigo == 1){
+
+        soma += 3.00
+        imposto += 0.02 * 3.00
+
+     }else if(array[i].codigo == 5){
+
+        soma += 5.00
+        imposto += 0.05 * 5.00
+
+     }else if(array[i].codigo == 8){
+
+        soma += 5.50
+        imposto += 0.07 * 5.50
+
+    }else if(array[i].codigo == 10){
+
+         soma += 2.50
+        imposto += 0.01 * 2.50
+
+    }else if(array[i].codigo == 7){
+
+        soma += 5.00
+        imposto += 0.06 * 5.00
+
+    }else if(array[i].codigo == 3){
+
+        soma += 3.00
+        imposto += 0.08 * 5.00
+
+    }
+
+
+    }
+    lucro = soma - imposto
+    
+    window.alert(`O valor total gerado foi de R$ ${soma}
+    o lucro de Sr José foi de R$ ${lucro.toFixed(2)} 
+    e o imposto pago é de ${imposto.toFixed(2)}`) 
+
+    }
+
+    gerenciarLanchonete(arrayCliente)
+    
+    
+    </script>
+</body>
+</html>
+
+
