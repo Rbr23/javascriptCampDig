@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #area{
+            color: white;
+            /*determinando como os elementos são posicionados; cada elemento ocupa seu espaço*/
+            position: absolute;
+            /*centralizar*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*transparência*/
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 15px;           
+        }
+
+        .inputArea{
+            position: relative;
+        }
+
+        .inputUsuario{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 100%;
+            width: 100%;
+        }
+
+        fieldset{
+            border: 3px solid rgb(17, 172, 107)
+        }
+
+        legend{
+            border: 1px solid;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(17, 172, 107);
+            border-radius: 8px;
+        }
+
+        #submit{
+            background-color: white;
+            width: 100%;
+            border: none;
+            padding: 5px;
+            color: rgb(17, 172, 107);
+            font-size: 15px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- divisão, seção, conteiner dentro do documento html-->
+    <div id="area">
+        <!--formulário-->
+        <!--atributo envolve uma informação adicional que comunicamos para tag-->
+        <form action="">
+            <!--agrupar elementos-->
+            <fieldset>
+                <legend><b>Registro de cliente</b></legend>
+                <br>
+                <div class="inputArea">
+                    <input type="text" id="nome" placeholder="Nome completo" class="inputUsuario" required>
+                </div>
+                <br><br>
+                <div class="inputArea">
+                    <input type="tel" id="telefone" placeholder="Telefone" class="inputUsuario" required>
+                </div>
+                <br><br>
+                <div>
+                    <p>Sexo: </p>
+                    <input type="radio" id="feminino" name="genero" required>
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="masculino" name="genero" required>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="outros" name="genero" required>
+                    <label for="outros">Outros</label>
+                </div>
+                <br><br>
+                <div class="inputArea">
+                    <input type="text" id="cidade" placeholder="Cidade" class="inputUsuario" required>
+                </div>
+                <br><br>
+                <div class="inputArea">
+                    <input type="text" id="estado" placeholder="Estado" class="inputUsuario" required>
+                </div>
+                <br><br>
+                <input type="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

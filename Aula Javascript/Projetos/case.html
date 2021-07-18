@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,9 @@
         }
 
         p {
-            color: chartreuse;
+            color: red;
         }
+
         
     </style>
 </head>
@@ -56,10 +57,10 @@
 
         arrayCliente = []
         numeroCliente = window.prompt("Digite o número de clientes que você quer cadastrar: ")
-        contador = 0
+        contador = 1
         do{ 
             try{
-                nomeCliente = window.prompt("Nome do cliente: ")
+                nomeCliente = window.prompt(`Nome do cliente ${contador}: `)
                 codigo = window.prompt("Código do produto: ")
                 clientes = new cliente(nomeCliente, codigo)
                 arrayCliente.push(clientes)
@@ -68,56 +69,56 @@
                 window.alert(error)
             }
             
-        }while(contador < numeroCliente)
+        }while(contador <= numeroCliente)
 
 
 
 
 
     function gerenciarLanchonete(array){
-    soma = null  
-    imposto = null 
-    for(let i = 0; i < array.length; i++){
-   
-     if(array[i].codigo == 1){
-
-        soma += 3.00
-        imposto += 0.02 * 3.00
-
-     }else if(array[i].codigo == 5){
-
-        soma += 5.00
-        imposto += 0.05 * 5.00
-
-     }else if(array[i].codigo == 8){
-
-        soma += 5.50
-        imposto += 0.07 * 5.50
-
-    }else if(array[i].codigo == 10){
-
-         soma += 2.50
-        imposto += 0.01 * 2.50
-
-    }else if(array[i].codigo == 7){
-
-        soma += 5.00
-        imposto += 0.06 * 5.00
-
-    }else if(array[i].codigo == 3){
-
-        soma += 3.00
-        imposto += 0.08 * 5.00
-
-    }
-
-
-    }
-    lucro = soma - imposto
+        soma = null  
+        imposto = null 
+        for(let i = 0; i < array.length; i++){
     
-    window.alert(`O valor total gerado foi de R$ ${soma}
-    o lucro de Sr José foi de R$ ${lucro.toFixed(2)} 
-    e o imposto pago é de ${imposto.toFixed(2)}`) 
+        if(array[i].codigo == 1){
+
+            soma += 3.00
+            imposto += 0.02 * 3.00
+
+        }else if(array[i].codigo == 5){
+
+            soma += 5.00
+            imposto += 0.05 * 5.00
+
+        }else if(array[i].codigo == 8){
+
+            soma += 5.50
+            imposto += 0.07 * 5.50
+
+        }else if(array[i].codigo == 10){
+
+            soma += 2.50
+            imposto += 0.01 * 2.50
+
+        }else if(array[i].codigo == 7){
+
+            soma += 5.00
+            imposto += 0.06 * 5.00
+
+        }else if(array[i].codigo == 3){
+
+            soma += 3.00
+            imposto += 0.08 * 5.00
+
+        }
+
+
+        }
+        lucro = soma - imposto
+        
+        window.alert(`O valor total gerado foi de R$ ${soma}
+        o lucro de Sr José foi de R$ ${lucro.toFixed(2)} 
+        e o imposto pago é de ${imposto.toFixed(2)}`) 
 
     }
 
