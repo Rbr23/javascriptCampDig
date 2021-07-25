@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+     <title>Formulário</title>
     <style>
-        body{
+
+         body{
             font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -27,17 +28,16 @@
         .inputArea{
             position: relative;
         }
-
+        
         .inputUsuario{
             background: none;
             border: none;
             border-bottom: 1px solid white;
             outline: none;
-            color: white;
             font-size: 100%;
             width: 100%;
         }
-
+        
         fieldset{
             border: 3px solid rgb(17, 172, 107)
         }
@@ -60,6 +60,13 @@
             border-radius: 10px;
         }
 
+        .destaque{
+            border: solid 10px greenyellow;
+            color: white;
+            font-weight: bold;   
+        }
+
+
     </style>
 </head>
 <body>
@@ -73,7 +80,7 @@
                 <legend><b>Registro de cliente</b></legend>
                 <br>
                 <div class="inputArea">
-                    <input type="text" id="nome" placeholder="Nome completo" class="inputUsuario" required>
+                    <input type="text" id="nome"  placeholder="Nome completo" class="inputUsuario"  required>
                 </div>
                 <br><br>
                 <div class="inputArea">
@@ -98,9 +105,66 @@
                     <input type="text" id="estado" placeholder="Estado" class="inputUsuario" required>
                 </div>
                 <br><br>
-                <input type="submit" id="submit">
+                <input type="submit" id="submit" value="ENVIAR">
             </fieldset>
         </form>
     </div>
+
+    <script>
+        
+        //document -> retorna todo o documento
+        //console.log() -> retorna uma string
+        //console.log(document)
+        //console.dir(document)
+        //console.dir(document.images)
+        //console.dir(document.forms)
+        //console.dir(document.links)
+        //console.dir(document.head)
+        //console.dir(document.location.href)
+
+        /*SELEÇÃO*/
+        //ID -> selecionar por id
+        /*
+        const nome = document.getElementById("nome")
+        nome.value = "Roberto Batista Ribeiro"
+        nome.classList.add("destaque")
+
+        const telefone = document.getElementById("telefone")
+        telefone.value = "21 985362728"
+        telefone.classList.add("destaque")
+        */
+
+        //TAG -> selecionar por nome da tag
+        //const divs = document.getElementsByTagName("div")
+        //Array.from(divs).forEach( i => i.classList.add('destaque'))
+
+        //CLASSE -> selecionar por nome da classe
+        //const elementos = document.getElementsByClassName('inputUsuario')
+        //Array.from(elementos).forEach(i => i.classList.add("destaque"))
+
+        //QuerySelector -> selecionar qualquer elemento, sendo classe, id, tag...
+        const body = document.querySelector('body')
+
+        //style -> propriedade para acessar os atributos css
+        body.style.backgroundColor = "blue"
+
+        //método pertencente ao DOM para criar um elemento
+        const div = document.createElement('div')
+        //atribui um elemento html
+        div.innerHTML = '<h1> CAMPINHO DIGITAL </h1>'
+        div.style.color = "red"
+      
+        //atribui um texto puramente sem ler as tags    
+        //div.innerText = '<h1> CAMPINHO DIGITAL </h1>'
+
+        //appendChild atribui um elemento filho ao elemento pai    
+        body.appendChild(div)
+
+        //textContent permite fazer a visualização do conteúdo textual 
+        console.log(div.textContent)
+
+
+
+    </script>
 </body>
 </html>
