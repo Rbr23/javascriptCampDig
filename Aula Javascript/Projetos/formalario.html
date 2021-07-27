@@ -57,13 +57,47 @@
             padding: 5px;
             color: rgb(17, 172, 107);
             font-size: 15px;
+            cursor: pointer;
             border-radius: 10px;
+        }
+
+        #submit:hover{
+            background-color: red;
         }
 
         .destaque{
             border: solid 10px greenyellow;
             color: white;
             font-weight: bold;   
+        }
+
+        .esconder-formulario{
+            animation: andar 500ms;
+        }
+
+        form{
+            animation-name: escala;
+            animation-duration: 500ms;
+        }
+
+
+        @keyframes andar{
+            from{
+                transform: translateY(0);
+            }
+            to {
+                transform: translate(200vh);
+            }
+        }
+
+
+        @keyframes escala{
+            from{
+                transform: scale(0.8);
+            }
+            to{
+                transform: scale(1);
+            }
         }
 
 
@@ -143,26 +177,44 @@
         //Array.from(elementos).forEach(i => i.classList.add("destaque"))
 
         //QuerySelector -> selecionar qualquer elemento, sendo classe, id, tag...
-        const body = document.querySelector('body')
+        //const body = document.querySelector('body')
 
         //style -> propriedade para acessar os atributos css
-        body.style.backgroundColor = "blue"
+        //body.style.backgroundColor = "blue"
 
         //método pertencente ao DOM para criar um elemento
-        const div = document.createElement('div')
+        //const div = document.createElement('div')
         //atribui um elemento html
-        div.innerHTML = '<h1> CAMPINHO DIGITAL </h1>'
-        div.style.color = "red"
+        //div.innerHTML = '<h1> CAMPINHO DIGITAL </h1>'
+        //div.style.color = "red"
       
         //atribui um texto puramente sem ler as tags    
         //div.innerText = '<h1> CAMPINHO DIGITAL </h1>'
 
         //appendChild atribui um elemento filho ao elemento pai    
-        body.appendChild(div)
+        //body.appendChild(div)
 
         //textContent permite fazer a visualização do conteúdo textual 
-        console.log(div.textContent)
+        //console.log(div.textContent)
 
+
+
+
+        /* AULA DE QUINTA-FEIRA*/
+
+        const divPrincipal = document.querySelector("#area")
+
+        const botao = document.querySelector("#submit")
+
+        botao.addEventListener("click", event =>{
+            divPrincipal.classList.add("esconder-formulario")
+        })
+
+        divPrincipal.addEventListener("animationend", event =>{
+            if(event.animationName == "andar"){
+                divPrincipal.style.display = "none"
+            }        
+        })
 
 
     </script>
