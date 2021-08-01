@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Formulário</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* MENU */
+
+        #menu{
+            list-style: none;
+            padding: 0;
+            background-color: rgb(37, 37, 39);
+        }
+
+        #menu li{
+            display: inline;
+        }
+
+        #menu li a{
+            color: white;
+            padding: 20px;
+            display: inline-block;
+            text-decoration: none;
+            transition: background .6s;
+        }
+
+        #menu li a:hover{
+            background-color: rgb(148, 0, 211);
+        }
+
+        /*----------------------------*/
+
+         body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to left, rgb(255, 255, 255), rgb(148, 0, 211));
+        }
+
+        #area{
+            color: white;
+            /*determinando como os elementos são posicionados; cada elemento ocupa seu espaço*/
+            position: absolute;
+            /*centralizar*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*transparência*/
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 15px;           
+        }
+
+        .inputArea{
+            position: relative;
+        }
+        
+        .inputUsuario{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            font-size: 100%;
+            width: 100%;
+        }
+        
+        fieldset{
+            border: 3px solid white
+        }
+
+        legend{
+            border: 1px solid;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(148, 0, 211);
+            border-radius: 8px;
+        }
+
+        #submit{
+            background-color: white;
+            width: 100%;
+            border: none;
+            padding: 5px;
+            color: rgb(148, 0, 211);
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+
+        .destaque{
+            border: solid 10px greenyellow;
+            color: white;
+            font-weight: bold;   
+        }
+
+
+        form{
+            animation-name: escala;
+            animation-duration: 700ms;
+        }
+
+
+        @keyframes escala{
+            from{
+                transform: scale(0.8);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="">INÍCIO</a></li>
+            <li><a href="">SOBRE</a></li>
+            <li><a href="">QUEM SOMOS</a></li>
+            <li><a href="">CONTATO</a></li>
+        </ul>
+    </nav>
+    <div id="area">
+        <form action="">
+            <fieldset>
+                <legend><b>CAMPINHO DIGITAL</b></legend>
+                <br>
+                <div class="inputArea">
+                    <input type="text" id="nome"  placeholder="Nome completo" class="inputUsuario"  required>
+                </div>
+                <br><br>
+                <div class="inputArea">
+                    <input type="tel" id="telefone" placeholder="Telefone" class="inputUsuario" required>
+                </div>
+                <br><br>
+                <div>
+                    <p>Sexo: </p>
+                    <input type="radio" id="feminino" name="genero" required>
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="masculino" name="genero" required>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="outros" name="genero" required>
+                    <label for="outros">Outros</label>
+                </div>
+                <br><br>
+                <div class="inputArea">
+                    <input type="text" id="cidade" placeholder="Cidade" class="inputUsuario" required>
+                </div>
+                <br><br>
+                <div class="inputArea">
+                    <input type="text" id="estado" placeholder="Estado" class="inputUsuario" required>
+                </div>
+                <br><br>
+                <input type="submit" id="submit" value="ENVIAR">
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+</html>

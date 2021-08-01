@@ -70,9 +70,11 @@ console.log('------------------------------------------AULA DE QUINTA-----------
 var notas = [2, 8, 6, 9, 10, 23, 12, 16]
 
 //FOR MANUAL
-for(var i = 0; i < notas.length; i++){
-  //  console.log(notas[i])
+for(var i = 0; 10 > i; i++){
+     console.log(notas[i])
 }
+
+notas.forEach( i => console.log(i))
 
 
 //utilizado para iterações de conjuntos de dados, como objetos ou arrays
