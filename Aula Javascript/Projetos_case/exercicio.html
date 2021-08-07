@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO</title>
+</head>
+<body>
+    <form action="" onsubmit="printarCpf()">
+        <div>
+            <input type="number" id="cpf"  placeholder="CPF">
+            <label for="">CPF</label>
+        </div>
+        <input type="submit" value="ENVIAR">
+    </form>
+</body>
+
+<script>
+
+    function printarCpf(){
+        var cpf = document.getElementById("cpf").value
+        alert(`O número cpf é ${cpf}`)
+    }
+ 
+
+</script>
+</html>
